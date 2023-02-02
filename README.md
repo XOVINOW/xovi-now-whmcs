@@ -12,7 +12,7 @@ For the latest WHMCS minimum system requirements, please refer to <https://docs.
 
 ## Installation
 
-* Download the latest zip archive from the [releases page](https://github.com/XOVINOW/xovi-now-whmcs/releases/tag/V1.0)
+* Download the latest zip archive from the [releases page](https://github.com/XOVINOW/xovi-now-whmcs/releases)
 * Extract the contents of the zip file in the WHMCS root directory; the module will be extracted to `/modules/servers/xovinow`
 * Remove the zip file afterward
 
