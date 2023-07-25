@@ -11,7 +11,7 @@ return static function (RectorConfig $rectorConfig): void {
         __DIR__ . '/../lib',
         __DIR__ . '/../vendor',
         __DIR__ . '/../hooks.php',
-        __DIR__ . '/../p360monitoring.php',
+        __DIR__ . '/../xovinow.php',
     ]);
 
     $rectorConfig->sets([
