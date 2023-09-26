@@ -77,12 +77,11 @@ function xovinow_ClientArea(array $params): string
         $license = $kaApi->retrieveLicense($keyId);
         $activationUrl = UrlHelper::getActivationUrl($license);
         $dashboardUrl = UrlHelper::getDashboardUrl();
+        $html = '';
 
         if ($license->getActivationInfo()->isActivated()) {
-            return '<div class="tab-content"><div class="row"><div class="col-sm-3 text-left">' . $translator->translate('xovinow_button_license_activated') . '</div></div></div><br/>';
+            $html .= '<div class="tab-content"><div class="row"><div class="col-sm-3 text-left">' . $translator->translate('xovinow_button_license_activated') . '</div></div></div><br/>';
         }
-
-        $html = '';
 
         if (!$license->isTerminated() && !$license->isSuspended()) {
             $html .= '<div class="tab-content"><a class="btn btn-block btn-info" href="' . $activationUrl . '" target="_blank">' . $translator->translate('xovinow_button_activate_license') . '</a></div><br/>';
