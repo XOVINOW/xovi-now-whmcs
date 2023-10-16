@@ -81,9 +81,7 @@ function xovinow_ClientArea(array $params): string
 
         if ($license->getActivationInfo()->isActivated()) {
             $html .= '<div class="tab-content"><div class="row"><div class="col-sm-3 text-left">' . $translator->translate('xovinow_button_license_activated') . '</div></div></div><br/>';
-        }
-
-        if (!$license->isTerminated() && !$license->isSuspended()) {
+        } elseif (!$license->isTerminated() && !$license->isSuspended()) {
             $html .= '<div class="tab-content"><a class="btn btn-block btn-info" href="' . $activationUrl . '" target="_blank">' . $translator->translate('xovinow_button_activate_license') . '</a></div><br/>';
         }
 
